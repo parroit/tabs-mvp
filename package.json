@@ -37,6 +37,6 @@
   "keywords": ["tabs","mvp"],
   "dependencies": {
     "lodash": "~2.4.1",
-    "simplator": ">0.0.5"
+    "simplator": ">0.0.4"
   }
 }
