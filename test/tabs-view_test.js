@@ -5,12 +5,11 @@ var assert = require("assert"),
 
 
 describe("tabs-view", function () {
-    var $ = cheerio.load('<div id="content"></div>');
-    var tabsView = new TabsView($);
+    var $ = cheerio.load('<div id="content"></div>'),
+        tabsView = new TabsView($),
+        handlers = {},
+        $a = $("a");
 
-    var handlers = {};
-
-    var $a = $("a");
     $a.__proto__.click = function (handler) {
         var key = $(this).parent("li").attr("id");
 
