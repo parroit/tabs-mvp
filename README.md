@@ -1,14 +1,14 @@
-# pager-mvp
-[![Build Status](https://secure.travis-ci.org/parroit/pager-mvp.png?branch=master)](http://travis-ci.org/parroit/pager-mvp)  [![Npm module](https://badge.fury.io/js/pager-mvp.png)](https://npmjs.org/package/pager-mvp) [![Code Climate](https://codeclimate.com/github/parroit/pager-mvp.png)](https://codeclimate.com/github/parroit/pager-mvp)
+# tabs-mvp
+[![Build Status](https://secure.travis-ci.org/parroit/tabs-mvp.png?branch=master)](http://travis-ci.org/parroit/tabs-mvp)  [![Npm module](https://badge.fury.io/js/tabs-mvp.png)](https://npmjs.org/package/tabs-mvp) [![Code Climate](https://codeclimate.com/github/parroit/tabs-mvp.png)](https://codeclimate.com/github/parroit/tabs-mvp)
 
 The best project ever.
 
 ## Getting Started
-Install the module with: `npm install pager-mvp --save`
+Install the module with: `npm install tabs-mvp --save`
 
 ```javascript
-var pager_mvp = require('pager-mvp');
-pager_mvp.awesome(); // "awesome"
+var tabs_mvp = require('tabs-mvp');
+tabs_mvp.awesome(); // "awesome"
 ```
 
 ## Documentation
