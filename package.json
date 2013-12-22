@@ -34,9 +34,13 @@
     "grunt-contrib-watch": "~0.5.3",
     "cheerio": "~0.12.4"
   },
-  "keywords": ["tabs","mvp"],
+  "keywords": [
+    "tabs",
+    "mvp"
+  ],
   "dependencies": {
     "lodash": "~2.4.1",
-    "simplator": ">0.0.4"
+    "simplator": ">0.0.4",
+    "telescope": ">0.1.0"
   }
 }
