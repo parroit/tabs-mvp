@@ -74,6 +74,7 @@ describe("tabs-view", function () {
         });
 
         it("render active state", function () {
+            expect($("#tab1").hasClass("active")).to.be.equal(false);
             expect($("#tab2").hasClass("active")).to.be.equal(true);
         });
 
@@ -146,6 +147,28 @@ describe("tabs-view", function () {
 
 
         });
+
+
+
+    });
+
+    describe("setActive", function () {
+        before(function () {
+            tabsView.setActive("tab1");
+
+        });
+
+        it("is defined", function () {
+            expect(tabsView.setActive).to.be.an('function');
+        });
+
+        it("change active items class", function () {
+            expect($("#tab1").hasClass("active")).to.be.equal(true);
+            expect($("#tab2").hasClass("active")).to.be.equal(false);
+
+        });
+
+
 
 
 

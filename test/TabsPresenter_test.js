@@ -11,8 +11,17 @@ describe("tabs-presenter", function () {
     var tabs = makeTabs(),
         $ = cheerio.load('<div id="content"></div>'),
         view = new TabsView($),
-        tabsPresenter = new TabsPresenter(tabs,view);
-    tabsPresenter.start();
+        tabsPresenter = new TabsPresenter(tabs,view,$)
+        $a=$("a");
+
+    $a.__proto__.click = function (handler) {
+
+    };
+
+    $a.__proto__.off = function (event) {
+
+    };
+    tabsPresenter.start("#content");
 
 
     it("is defined", function () {
@@ -30,6 +39,10 @@ describe("tabs-presenter", function () {
     describe("start", function () {
         it("is defined", function () {
             expect(tabsPresenter.start).to.be.an('function');
+        });
+
+        it("render tabs to holder", function () {
+            expect($("#content").html().replace(/[\r\n ]/g,"")).to.be.equal('<ulclass="tabs"></ul>');
         });
     });
 
