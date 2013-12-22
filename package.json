@@ -41,6 +41,7 @@
   "dependencies": {
     "lodash": "~2.4.1",
     "simplator": ">0.0.4",
-    "telescope": ">0.1.0"
+    "telescope": ">0.1.0",
+    "simplator-subtemplates": "~0.3.0"
   }
 }
