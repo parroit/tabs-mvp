@@ -109,6 +109,11 @@ describe("tabs-view", function () {
             expect($("#tab3").html()).to.be.equal("<a>tab 3</a>");
         });
 
+        it("set item caption", function () {
+            tabsView.setCaption("tab3","changed 3");
+            expect($("#tab3").html()).to.be.equal("<a>changed 3</a>");
+        });
+
         it("render active state", function () {
             expect($("#tab3").hasClass("active")).to.be.equal(true);
         });

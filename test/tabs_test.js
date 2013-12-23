@@ -9,12 +9,14 @@ var assert = require("assert"),
 function makeTab(caption){
     return {
         active:false,
-        caption: caption
+        caption: caption,
+        id:caption
     };
 }
 
 describe("Tabs", function () {
     var tab1 = makeTab("test1"),
+        obsTab1,
         tab2 = makeTab("test2");
 
     it("is defined", function () {
@@ -31,7 +33,7 @@ describe("Tabs", function () {
 
     it("activate first added tab", function () {
 
-        tabs.push(tab1);
+        obsTab1=tabs.push(tab1);
         expect(tab1.active).to.be.equal(true);
     });
 
@@ -46,6 +48,18 @@ describe("Tabs", function () {
 
         tabs.remove(0);
         expect(tab2.active).to.be.equal(true);
+    });
+
+    it("emit captionChanged", function () {
+        var changedId,changedCaption;
+        tabs.events.on("captionChanged",function(id,caption){
+            changedId=id;
+            changedCaption=caption;
+        });
+        obsTab1.caption="changed1";
+        expect(tab1.caption).to.be.equal("changed1");
+        expect(changedId).to.be.equal("test1");
+        expect(changedCaption).to.be.equal("changed1");
     });
 
     describe("activeChanged event",function(){
